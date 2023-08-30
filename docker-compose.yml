@@ -1,0 +1,19 @@
+version: '3'
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo-beticos
+    restart: always
+    ports:
+      - 27020:27017
+    volumes:
+      - ./data:/data/db
+  backend:
+    build: ./backend
+    container_name: backend-beticos
+    restart: always
+    ports:
+      - 3333:3000
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
