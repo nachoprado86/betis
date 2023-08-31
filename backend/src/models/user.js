@@ -19,4 +19,4 @@ const UserSchema = new connection.Schema({
 
 const User = connection.model('User', UserSchema);
 
-export default User;
+export default User; 

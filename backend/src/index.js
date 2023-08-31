@@ -14,7 +14,7 @@ app.get ('/', (req, res) => {
 
 app.use('/api', router);
 
-app.listen(3010, () => {
-    console.log('Server Listening on port 3010')
+app.listen(3000, () => {
+    console.log('Server Listening on port 3000')
 });
 

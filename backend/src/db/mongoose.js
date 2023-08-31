@@ -3,9 +3,9 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const host = "localhost";
+const host = "mongo-beticos";
 const port = "27017";
-const database = "beticos del norte db";
+const database = "beticos_del_norte_2023";
 
 const url = `mongodb://${host}:${port}/${database}`;
 
