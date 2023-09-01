@@ -10,4 +10,4 @@ router.use('/posts', postRouter);
 
 router.use('/', userRouter);
 
-export default router;
+export default router; 
