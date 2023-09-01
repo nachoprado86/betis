@@ -1,11 +1,22 @@
 
 
 
-const Form = () => {
+const Form = ({onSubmit}) => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const post = {
+            title: e.target.title.value,
+            text: e.target.text.value,
+            imageLink: e.target.imageLink.value,
+            tags: e.target.tags.value,
+            autor: e.target.autor.value
+        }
+        onSubmit(post);
+    }
     return (
         <div>
             <h1>Escribir una publicación</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label htmlFor="title">Título</label>
                 <input type="text" id="title" name="title" />
                 <label htmlFor="text">Texto</label>
