@@ -6,7 +6,7 @@ function Vascos () {
     const [card, setCard] = useState([]);
 
     const getCard= async () => {
-      const response = await fetch('http://localhost:3333/api/vascos_en_el_betis');
+      const response = await fetch('http://localhost:3333/api/vascos_betis');
       const data = await response.json();
       console.log(data);
       setCard (data);

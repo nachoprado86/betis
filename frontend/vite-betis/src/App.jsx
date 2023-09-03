@@ -6,6 +6,7 @@ import NuestraPena from './NuestraPena';
 import Vascos from './Vascos';
 import Mundo from './Mundo';
 import Contacto from './Contacto';
+import Header from './components/Header';
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -42,8 +43,9 @@ function App() {
 
 
   return (
+    
     <section>
-
+<Header />
      <div className="App">
       <h1>BLOG: Haciendo Betis en Euskadi (Béticos del Norte).</h1>
       <Form onSubmit={createPost}/>
