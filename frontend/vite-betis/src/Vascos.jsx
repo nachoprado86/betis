@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Card from "./components/Card";
 import './Vascos.css';
 
@@ -11,10 +11,16 @@ function Vascos () {
       console.log(data);
       setCard (data);
     }
+
+    useEffect(() => {
+        getCard();
+    
+      },[]);
+
     return (
         <div>
             <h1>VASCOS EN EL BETIS.</h1>
-            <div className="Vascos">
+            <div className="Card">
             {card.map((card) => (
         <Card key={card.id} card={card} />
       ))}
